@@ -1,0 +1,949 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins: wght@100; 300; 400;500; 600& display-swap');
+
+:root{
+    ---green:rgb(106, 202, 239);
+    ---dark-color:blue;
+    ---black:#ada6a6;
+    ---light-color:#a69d9d;
+    ---border:.1rem solid rgba(0,0,0,1);
+    --border-hover:.1rem solid var(--black);
+    --box-shadow:0 .5ren 1rem rgba(0,0,0,.1);
+}
+*{
+    font-family: 'poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    transition:width none;
+  
+
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--black);
+}
+section{
+    padding: 5rem 9%;
+}
+ .heading{
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.heading::before{
+    content: '';
+    position: absolute;
+    top: 50%;left:0;
+    transform: translateY(-50);
+    width: 100%;
+    height: 01rem;
+    background: rgba(0,0,0,.1);
+    z-index: -1;
+}
+.heading span{
+    font-size: 3rem;
+    padding: .5rem 2rem;
+    color: var(---black);
+    background: #fff;
+    border: var(---border);
+} 
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    border-radius: .5rem;
+    color: #fff;
+    background: var(---green);
+    font-size: 1.7rem;
+    cursor:pointer;
+    font-weight: 500;
+}
+.btn:hover{
+    background: var(---dark-color);
+}
+
+.header .header-1{
+    background:#fff;
+    padding:1.5rem 9%;
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .header-1 .logo{
+    font-size: 3rem;
+    font-weight: bolder;
+    color:var(---black);
+}
+.header .header-1 .logo i{
+    color:black;
+}
+.header .header-1 .search-form{
+    width: 50rem;
+    height: 5rem;
+    border: var(---border);
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: .5rem;
+}
+.header .header-1 .search-form input{
+    font-size: 1.6rem;
+    padding: 0 1.2rem;
+    height: 100%;
+    width: 100%;
+    text-transform: none;
+    color: var(---black);
+}
+.header .header-1 .search-form label{
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    color: var(---black);
+    cursor: pointer;
+}
+.header .header-1 .search-form label:hover{
+    color: var(---green);
+}
+
+.header .header-1 .icons div,
+.header .header-1 .icons a{
+    font-size: 2.5rem;
+    margin: 1.5rem;
+    color: var(---black);
+    cursor: pointer;
+}
+
+.header .header-1 .icons div:hover,
+.header .header-1 .icons a:hover{
+    color: var(---green);
+}
+
+#search-btn{
+    display: none;
+}
+
+.header .header-2{
+    background:var(---green);
+}
+.header .header-2 .navbar{
+    text-align: center;
+
+}
+.header .header-2 .navbar a{
+    color: #fff;
+    display: inline-block;
+    padding: 1.2rem;
+    font-size: 1.7rem;
+}
+
+.header .header-2 .navbar a:hover{
+    background: var(---dark-color);
+}
+
+.header .header-2 .active{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+body{
+    height: 300rem;
+}
+
+
+.bottom-navbar{
+    text-align: center;
+    background: var(---green);
+    position: fixed;
+    bottom: 0;left: 0;right: 0;
+    z-index: 1000;
+}
+.bottom-navbar a{
+    height: 3rem;
+    font-size: 2.5rem;
+    padding: 2rem;
+    color: #fff;
+}
+.bottom-navbar a:hover{
+    background-color: var(---dark-color);
+}
+
+.login-form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:rgba(255,255,255,.9);
+    position: fixed;
+    top:0; right:-105%;
+    z-index: 10000;
+    height:100%;
+    width: 100%;
+}
+.login-form-container.active{
+    right:0;
+}
+.login-form-container form{
+    background: #fff;
+    border: var(---border);
+    width: 40rem;
+    height: 70rem;
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    margin: 2rem;
+}
+.login-form-container form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(---black);
+    text-align: center;
+}
+.login-form-container form span{
+    display: block;
+    font-size:  1.5em;
+    padding-top: 1rem;
+}
+.login-form-container form .box{
+    width: 100%;
+    margin: 7rem 0;
+    font-size: 1.6rem;
+    border: var(---border);
+    padding: 1rem 1.2rem;
+    color:var(---black);
+    text-transform: none;
+}
+
+.login-form-container form .checkbox{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding: 1rem 0;
+}
+.login-form-container form .checkbox label{
+    font-size: 1.5rem;
+    color: var(---light-color);
+    cursor: pointer;
+}
+
+.login-form-container form .btn{
+    text-align: center;
+    width: 100%;
+    margin:1.5rem 0;
+}
+.login-form-container form p{
+    padding-top: .8rem;
+    color: var(---light-color);
+    font-size: 1.5rem;
+}
+
+.login-form-container form p a{
+    color: var(---green);
+    text-decoration: var(---green);
+}
+.login-form-container #close-login-btn{  
+    position: absolute;                           
+    top:1.5rem;right: 2.5rem;
+    font-size: 5rem;
+    color: var(---black);
+    cursor: pointer;
+}
+
+.home {
+    background-image: url('image/bg3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.home .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+.home .row .content{
+    flex:1 1 45rem;
+}
+.home .row .books-slider{
+    flex:1 1 45rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+.home .row .books-slider a img{
+    height: 25rem;
+}
+.home .row .books-slider a:hover img{
+    transform: scale(.9);
+}
+.home .row .content h3{
+    color: var(---black);
+    font-size: 4.5rem;
+    
+}
+.home .row .content p{
+    color: var(---light-color);
+    font-size: 1.4rem;
+    line-height: 2;
+    padding: 1rem 0;
+    
+}
+.icons-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+    gap: 1.5rem;
+}
+.icons-container .icons{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+.icons-container .icons i{
+    font-size: 3.5rem;
+    color: var(---green);
+}
+.icons-container .icons h3{
+    font-size: 2.2rem;
+    color: var(---black);
+    padding-bottom: .5rem;
+}
+.icons-container .icons p{
+    font-size: 1.4rem;
+    color: var(---light-color);
+}
+
+
+
+
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set up featured slider styles */
+.featured .featured-slider {
+    overflow: hidden;
+}
+
+.featured .featured-slider .wrapper {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.featured .featured-slider .box {
+    flex: 0 0 auto;
+    width: 25rem;
+    margin: 2px;
+    position: relative;
+    overflow: hidden;
+    border: var(--border);
+    text-align: center;
+    padding: 0%;
+    scroll-snap-align: start;
+}
+
+.featured .featured-slider .box:hover {
+    border: var(--border-hover);
+}
+
+/* Optional: Add navigation buttons */
+.featured .featured-slider .prev,
+.featured .featured-slider .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #e44d26;
+    cursor: pointer;
+}
+
+.featured .featured-slider .prev {
+    left: 10px;
+}
+
+.featured .featured-slider .next {
+    right: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* .featured .featured-slider .box{
+    width: 25rem;
+    margin: 2px;
+    position: relative;
+    overflow: hidden;
+    border: var(---border);
+    text-align: center;
+    padding: 0%;
+}
+
+
+.featured .featured-slider .box:hover{
+    border: var(--border-hover);
+}
+
+.featured .featured-slider .box .image{
+    padding: 1rem;
+    background: linear-gradient(15deg, #eee 30%,#fff 30.1%);
+}
+
+.featured .featured-slider .box:hover.image{
+    transform: translateY(6rem);
+}
+.featured .featured-slider .box .image img{
+    height:25rem;
+
+}
+.featured .featured-slider .box.icons{
+    border-bottom: var(--border-hover);
+    position: absolute;
+    top: 0; left: 0;right: 0;
+    background:#fff;
+    z-index: 1;
+    transform: translateY(-100%);
+
+}
+.featured .featured-slider .box:hover.icons{
+    transform: translateY(0%);
+}
+.featured .featured-slider .box.icons a{
+    color:var(---black);
+    font-size: 4.2rem;
+    padding: 1.3rem 1.5rem;
+}
+.featured .featured-slider .box.icons a:hover{
+    background: var(---green);
+    color: #fff;;
+}
+
+.featured .featured-slider .box.content{
+    background: #eee;
+    padding: 1.5rem;
+}
+.featured .featured-slider .box.content h3{
+    font-size: 3rem;
+    color: var(---black);
+}
+.featured .featured-slider .box.content .price{
+    font-size: 3rem;
+    color: var(---black);
+    padding-top: 1rem;
+}
+.featured .featured-slider .box .content .price span{
+    font-size: 1rem;
+    color: var(---light-color);
+    text-decoration: line-through;
+}  */
+
+
+.newsletter {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; /* Ensure the video doesn't interfere with user interactions */
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    /* Add other styles for your content */
+}
+.content h3{
+    color: #fff;
+    font-size:medium;
+    margin-left: auto;
+}
+#email{
+    font-size: 16px;
+    background-color: aliceblue;
+    font-weight: bold;
+    
+}
+
+
+
+/* .newsletter{
+    background: url(../new/image/11.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.newsletter form{
+    max-width: 55rem;
+    margin-left: auto;
+    text-align: center;
+    padding: 5rem 0;
+}
+.newsletter form h3{
+    font-size: 2.2rem;
+    color: #fff;
+    padding-bottom: .5rem;
+    font-weight: normal;
+
+}
+.newsletter form .box{
+    width: 100%;
+    margin:  .7rem 0;
+    padding: 1rem 1.2rem;
+    font-size: 1.6rem;
+    color: var(---black);
+    border-radius: .5rem;
+    text-transform: none;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries*/
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header .header-1{
+        padding: 2rem;
+    }
+    section{
+        padding:3rem 2rem;
+    }
+}
+@media (max-width:768px){
+    html{
+        scroll-padding-top: 0;
+    }
+    body{
+        padding-bottom: 6rem;
+    }
+    .header .header-2{
+        display:none;
+    }
+    .bottom-navbar{
+        display: block;
+    }
+    #search-btn{
+        display: inline-block;
+    }
+    .header .header-1{
+        box-shadow: var(--box-shadow);
+        position: relative;
+    }
+    .header .header-1 .search-form{
+        position: absolute;
+        top: -115%;right: 2rem;
+        width: 90%;
+        box-shadow: var(--box-shadow);
+    }
+    .header .header-1 .search-form.active{
+        top: 115%;
+    }
+    .home .row .content{
+        text-align: center;
+    }
+    .home .row .content h3{
+        font-size: 3.5rem;
+    }
+    .newsletter{
+        background-position:right;
+    }
+    .newsletter form{
+        margin-left: 0;
+        max-width: 100%;
+
+    }
+
+ }
+
+ /* .arrivals .arrivals-slider .box{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    border: var(---border);
+    margin: 1rem 0;
+     
+ }
+ .arrivals .arrivals-slider .box:hover{
+     border:var(--border-hover); 
+    
+ }
+ .arrivals .arrivals-slider .box .image img{
+    height: 15rem;
+
+ }
+ .arrivals .arrivals-slider .box .content h3{
+    font-size: 2rem;
+    color: var(---black);
+ }
+ .arrivals .arrivals-slider .box .content .price{
+    font-size: 2.2rem;
+    color: var(---black);
+    padding-bottom: .5rem;
+ }
+ .arrivals .arrivals-slider .box .content .price span{
+    font-size: 1.5rem;
+    color: var(---light-color);
+    text-decoration: line-through;
+ }
+ .arrivals .arrivals-slider .box .content .stars i{
+    font-size: 1.5rem;
+    color: var(---green);
+ } */
+
+ /* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the new arrivals */
+.arrivals {
+    margin: 20px 0; /* Adjust margin as needed */
+}
+
+/* Heading styles */
+.heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Arrival slider styles */
+.arrival-slider {
+    overflow-x: auto;
+}
+
+/* Wrapper for each set of boxes */
+.wrapper {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure items stay in a single row */
+    margin: 0 -10px; /* Adjust margin as needed */
+}
+
+/* Style for each box */
+.box {
+    flex: 0 0 calc(20% - 20px); /* Adjust the width and margin as needed */
+    text-decoration: none;
+    margin: 0 10px; /* Adjust margin as needed */
+}
+
+/* Basic styling for the box */
+.box {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.05); /* Adjust the scale factor for the hover effect */
+}
+
+/* Style for the image container */
+.image {
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Style for the content container */
+.content {
+    padding: 15px;
+}
+
+/* Style for the heading in the content */
+.content h3 {
+    color: black;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Style for the price */
+.price {
+    font-size: 1.1em;
+    color: #007bff; /* Adjust the color as needed */
+    margin-bottom: 10px;
+}
+
+.price span {
+    color: #777;
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+
+/* Style for the stars */
+.stars {
+    color: #f8d200; /* Adjust the color as needed */
+    margin-bottom: 10px;
+}
+
+.stars i {
+    margin-right: 2px;
+}
+
+
+.deal {
+    background: #eee;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.deal .content {
+    flex: 1 1 42rem;
+    padding: 2rem;
+}
+
+.deal .image img {
+    width: 50%;
+    height: 25%;
+}
+
+.deal .content h3 {
+    color: #2ecc71;
+    font-size: 2.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.deal .content h1 {
+    color: #333;
+    font-size: 4rem;
+}
+
+.deal .content p {
+    padding: 1rem 0;
+    color: #777;
+    font-size: 1.4rem;
+    line-height: 2;
+}
+
+.deal .content .btn {
+    display: inline-block;
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.deal .content .btn:hover {
+    background-color: #27ae60;
+}
+
+
+
+
+/* .deal{
+    background: #eee;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.deal .content{
+    flex: 1 1 42rem;
+
+}
+.deal .image img{
+    width:150%;
+}
+.deal .content h3{
+    color: var(---green);
+    font-size: 2.5rem;
+    padding-bottom:  .5rem;
+}
+.deal .content h1{
+    color: var(---black);
+    font-size: 4rem;
+}
+.deal .content p{
+    padding: 1rem 0;
+    color: var(---light-color);
+    font-size: 1.4rem;
+    line-height: 2;
+} */
+/* Add this CSS to your stylesheet */
+
+.reviews-slider {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+  }
+  
+  .wrap {
+    display: flex;
+  }
+  
+  .box {
+    flex: 0 0 calc(20% - 10px); /* Adjust the width and margin as needed */
+    margin-right: 10px; /* Adjust margin as needed */
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer; /* Add a pointer cursor on hover */
+  }
+  
+  .box:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Optional: To make sure the images and content don't exceed the container */
+  .box img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Add this CSS to your stylesheet */
+
+.footer {
+    background-color:lightblue;
+    color:black;
+    padding: 50px 0;
+  }
+  
+  .box-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .box {
+    width: 200px;
+    margin-bottom: 20px;
+    
+  }
+  
+  .box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .box a {
+    color: #1c1919;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+ 
+
+.share {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .share a {
+    font-size: 24px;
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Add a smooth color transition on hover */
+  }
+  
+  .share a:hover {
+    color: rgb(0, 255, 94); /* Change the color on hover as needed */
+  }
+  
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
+
+.product-details-container {
+    text-align: center;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-details .product-image {
+    width: fit-content;
+    height: fit-content;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .product-details p {
+    margin: 10px 0;
+  }
+  
+  .product-details button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .product-details button:hover {
+    background-color: #0056b3;
+  }
